@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://ealeman.com/sitemap.xml

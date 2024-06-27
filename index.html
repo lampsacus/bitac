@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta http-equiv="Content-Security-Policy"
+    content="child-src 'none'; object-src 'none'; script-src 'self' www.googletagmanager.com/gtag/js; connect-src www.google-analytics.com; img-src 'self' data:; base-uri 'self';">
+  <meta name="description" content="Eduardo Alemán. Blog. Bitácora. Lienzo Digital.">
+  <meta name="keywords"
+    content="Eduardo Alemán, Shelley, Aquino, Fedón, Platón, Filosofía, Inmortalidad, Alma, Tarkovsky, Solaris, Criticón, Baltasar Gracián y Morales, Schopenhauer, Sor Juana Inés de la Cruz, Iris Murdoch, Tolstói, Vitruvio, Da Vinci, globalización, Jacques Monod, Alejo Carpentier, Charles Dickens, Heinrich Schliemann, Traviata, Verdi, auriga, Delfos, escultura, griega, griego, Roma">
+  <meta name="author" content="Eduardo Alemán">
+  <link rel="icon" href="data:,">
+  <link rel=“canonical” href=“https://ealeman.com”>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff"> <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-B1BH7YYTER"></script>
+  <script src="./assets/scripts/google-analytics.js"> </script>
+  <title style="text-align:center">Eduardo Alemán</title>
+  <style>
+    body {
+      /* flex container */
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      background: #d8e0e9;
+
+      blockquote {
+        font: 14px/22px normal helvetica, sans-serif;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 50px;
+        padding-left: 18px;
+        border-left: 3px solid #ccc;
+      }
+
+      h1 a:link {
+        text-decoration: none;
+      }
+
+      h1 a:visited {
+        text-decoration: none;
+      }
+
+      h1 a:hover {
+        text-decoration: none;
+      }
+
+      .box {
+        background: #e8f4f0;
+        border: 1px solid #ccc;
+        border-radius: 0.25em;
+        margin: 0.5em;
+        padding: 1em;
+      }
+
+      .header {
+        align-self: flex-start;
+      }
+
+      .nav {
+        flex: 1 0 0;
+      }
+
+      .content {
+        flex: 4 0 0;
+      }
+
+      .sidebar {
+        flex: 2 0 0;
+        text-align: left;
+      }
+
+      .header,
+      .footer {
+        /* header footer*/
+        flex-basis: 100%;
+        text-align: center;
+      }
+
+      dl * {
+        margin: 1em;
+      }
+
+      @media (max-width: 700px) {
+        .nav {
+          flex: 1 1 100%;
+        }
+
+        .nav li {
+          display: inline;
+        }
+      }
+
+      @media (max-width: 500px) {
+
+        .content,
+        .sidebar {
+          flex: 1 1 100%;
+        }
+      }
+
+      /* restrict a responsive image to a maximum size, use the max-width property, with a pixel value of your choice */
+      .responsive {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+      }
+
+      /* Header */
+      header {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 10px 20px;
+        box-shadow: 0 1px 8px #ddd;
+        margin: .8px;
+      }
+
+      #nav-title {
+        margin-right: auto;
+        font-size: 2em;
+      }
+
+      header li {
+        list-style: none;
+        display: inline-block;
+        padding: 0 25px;
+        font-size: 1.75em;
+      }
+
+      header a {
+        text-decoration: none;
+        color: #1b1b1b;
+        transition: all 0.3s ease 0s;
+      }
+    }
+
+    /*header a:hover { color: #000c0b; }*/
+  </style>
+</head>
+
+<body>
+  <div class="box header"> <!-- Navbar -->
+    <header>
+      <h1 id="nav-title"><a href="https://ealeman.com/">Eduardo Alemán</a></h1>
+      <nav>
+        <ul>
+          <li><a href="./peregrinajes/">Peregrinajes</a></li>
+          <li><a href="./techne/">Téchne</a></li>
+          <a href="https://github.com/lampsacus/lampsacus.github.io" class="split"><img
+              src="./assets/images/github-mark.svg" width="20" height="20"
+              alt="Ir al repositorio del autor en GitHub"></a>
+        </ul>
+      </nav>
+    </header>
+  </div>
+  <div class="box nav">
+    <h2>Microensayos</h2>
+    <p><a href="https://ealeman.com">Página 1</a></p>
+    <p><a href="#fedon">El Fedón de Platón: La Filosofía de la Muerte y la Inmortalidad del Alma</a></p>
+    <p><a href="#citaensyme">Cita proveniente del libro "La Revolución Romana" de Ronald Syme</a></p>
+    <p><a href="#solaris">Acerca de "Solaris" (1974) de Andréi Tarkovsky</a></p>
+    <p><a href="#criticon">La Influencia de "El Criticón" de Baltasar Gracián y Morales en la Filosofía de
+        Schopenhauer</a></p>
+    <p><a href="#aurigadedelfos">La Auriga de Delfos y el estilo severo</a></p>
+    <p><a href="../p2/">Página 2</a></p>
+    <p><a href="../p3/">Página 3</a></p>
+  </div>
+  <div class="box content">
+    <section>
+      <h3><a id=fedon>El Fedón de Platón: La Filosofía de la Muerte y la Inmortalidad del Alma</a></h3>
+      <figure> <img src="./assets/images/POxy.v0015.n1809.a.01.Plato_.Phaedo.webp" loading="lazy" src="" width="800"
+          height="867"
+          alt="Papirología de Oxford (2022). Papiros de Oxirrinco, XV 1809. Platón, Fedón. Universidad de Oxford. Recurso en línea. https://doi.org/10.25446/oxford.21133039.v1"
+          class="responsive">
+        <figcaption>Papirología de Oxford (2022). Papiros de Oxirrinco, XV 1809. Platón, Fedón. Universidad de Oxford.
+          Recurso en
+          línea. <a href=" https://doi.org/10.25446/oxford.21133039.v1">Dominio Público</a>.
+        </figcaption>
+      </figure>
+      <p> El «Fedón» es una de las obras más significativas y conmovedoras de Platón, donde se presenta una reflexión
+        profunda sobre la muerte, la inmortalidad del alma y la verdadera naturaleza del conocimiento. Ambientado en las
+        últimas horas de vida de Sócrates, este diálogo filosófico no solo explora cuestiones metafísicas fundamentales,
+        sino que también ofrece una visión del carácter y la serenidad de Sócrates ante la muerte.</p>
+      <h4>Contexto y Estructura del Fedón</h4>
+      <p>El «Fedón» transcurre en la prisión donde Sócrates espera su ejecución, rodeado de sus amigos y discípulos,
+        incluyendo a Critón, Apolodoro y Fedón, el narrador del diálogo. A lo largo del diálogo, Sócrates ofrece una
+        serie de argumentos destinados a demostrar que el alma es inmortal y que la muerte no debe ser temida.</p>
+      <p>El diálogo comienza con una discusión sobre la naturaleza de la muerte y la actitud adecuada hacia ella.
+        Sócrates sostiene que los verdaderos filósofos no deben temer a la muerte, ya que la filosofía misma es una
+        preparación para morir. Esta afirmación establece el tono para los argumentos posteriores sobre la inmortalidad
+        del alma.
+      </p>
+      <h4> Argumentos sobre la Inmortalidad del Alma</h4>
+      <ol>
+        <li>El Ciclo de los Opuestos: Sócrates propone que todo lo que llega a ser lo hace a partir de su opuesto. Así,
+          la vida y la muerte son opuestos y deben transformarse continuamente uno en el otro. Por lo tanto, la vida
+          surge de la muerte y viceversa, sugiriendo que el alma debe existir después de la muerte para renacer.</li>
+        <li>La Teoría de la Reminiscencia: Según esta teoría, el aprendizaje es en realidad un proceso de recordar
+          conocimientos que el alma ya posee de vidas anteriores. Esto implica que el alma debe haber existido antes del
+          nacimiento y, por lo tanto, es inmortal.</li>
+        <li>La Argumentación de la Similitud: Sócrates argumenta que el alma es similar a las Formas eternas e
+          inmutables, como la justicia y la belleza, debido a su naturaleza inmaterial y racional. Como las Formas son
+          inmortales, el alma también debe serlo.</li>
+        <li>La Simplicidad del Alma: Sócrates sostiene que el alma, siendo invisible e inmaterial, no está sujeta a
+          descomposición como el cuerpo físico. Esta simplicidad e indivisibilidad del alma apoyan la idea de que no
+          puede ser destruida.</li>
+      </ol>
+      <h4>La Filosofía como Preparación para la Muerte</h4>
+      <p>Una de las ideas centrales del «Fedón» es que la filosofía es una preparación para la muerte. Sócrates describe
+        la vida del filósofo como un esfuerzo constante por separarse de los placeres y deseos del cuerpo y acercarse a
+        la pureza del pensamiento y la verdad. La muerte, en este contexto, es vista como la liberación definitiva del
+        alma del cuerpo, permitiéndole alcanzar un estado de conocimiento puro y sin restricciones.</p>
+      <h4>El Mito del Más Allá</h4>
+      <p>Al final del diálogo, Sócrates presenta un mito sobre el más allá para ilustrar el destino del alma después de
+        la muerte. Describe un cosmos ordenado donde las almas reciben recompensas o castigos según sus acciones en
+        vida, y donde las almas puras y filosóficas disfrutan de una existencia más elevada y plena. Aunque Sócrates
+        reconoce que este relato es un mito, lo utiliza para subrayar sus argumentos filosóficos y ofrecer consuelo a
+        sus amigos.</p>
+      <h4>La Muerte de Sócrates</h4>
+      <p>El «Fedón» concluye con la descripción de la muerte de Sócrates. Bebiendo la cicuta, Sócrates se enfrenta a su
+        destino con calma y dignidad, reafirmando sus creencias hasta el final. Su actitud serena y su disposición a
+        aceptar la muerte como una transición natural reflejan la coherencia entre su filosofía y su vida.</p>
+      <h4>Conclusión</h4>
+      <p>El «Fedón» es una obra que combina profunda reflexión filosófica con una narrativa emotiva. A través de los
+        argumentos sobre la inmortalidad del alma y la visión de la muerte como una liberación, Platón presenta una
+        visión del mundo donde la filosofía ofrece consuelo y esperanza frente a la mortalidad. La serenidad y el coraje
+        de Sócrates ante la muerte no solo destacan su sabiduría, sino que también inspiran a los lectores a considerar
+        sus propias actitudes hacia la vida y la muerte. El «Fedón» sigue siendo una fuente inagotable de reflexión
+        sobre la naturaleza del alma, la búsqueda de la verdad y el significado de la existencia humana.</p>
+      <a href="#">&#8593;</a>
+    </section>
+    <hr>
+
+    <section>
+      <h3><a id="citaensyme">Cita proveniente del libro "La Revolución Romana" de Ronald Syme</a></h3>
+      <blockquote>
+        "Pero no basta con liberar a Augusto de las exageraciones de sus panegiristas y reavivar el testimonio de la
+        causa vencida. Eso no
+        haría más que sustituir una forma de biografía por otra. En el peor de los casos, la biografía es anodina y
+        esquemática; en el mejor, se ve muchas veces frustrada por las discordias ocultas de la naturaleza humana. Es
+        más, la insistencia indebida en el carácter y las hazañas de una sola persona reviste a la historia de unidad
+        dramática a expensas de la verdad. Por mucho talento y poder que posea, el estadista romano no puede alzarse
+        solo, sin aliados, sin seguidores. Ese axioma es tan válido para los dinastas políticos de la última era de la
+        República como para su postrero y único heredero; el gobierno de Augusto fue el gobierno de un partido, y en
+        ciertos aspectos su Principado fue un sindicato. A decir verdad, lo uno presupone lo otro. La carrera del líder
+        revolucionario resulta fantástica e irreal, si se refiere sin alguna indicación de cómo estaba compuesta la
+        facción que dirigía; de la personalidad, acciones e influencia de los principales entre sus seguidores. En todas
+        las edades, cualquiera que sea la forma y el nombre del gobierno, sea monarquía, república o democracia, detrás
+        de la fachada se oculta una oligarquía, y la historia de Roma, republicana o imperial, es la historia de la
+        clase gobernante. Los generales, los diplomáticos, los financieros de la revolución se pueden identificar otra
+        vez, en la República de Augusto, como los ministros y los agentes del poder, los mismos hombres con diferente
+        ropaje. Ellos constituyen el gobierno del Nuevo Estado. <br>Será, por tanto, útil y provechoso investigar no
+        sólo el
+        origen y desarrollo del partido cesariano, sino también las vicisitudes de toda la clase dirigente durante un
+        largo período de años, en un intento de dar a este complejo tema la forma y el encuadre de un relato continuo de
+        acontecimientos. Y no es sólo la biografía de Augusto la que habrá de ser sacrificada en beneficio de la
+        historia; también Pompeyo y César habrán de ser sometidos a la debida subordinación. Tras las reformas de Sila,
+        una oligarquía restaurada de <em>nobiles</em> detentó el poder en Roma. Pompeyo luchó contra ella; pero Pompeyo,
+        pese a
+        todo su poder, tuvo que negociar con ella. Tampoco César hubiera podido gobernar sin su concurso. Coaccionada
+        por Pompeyo y enérgicamente reprimida por César, la aristocracia quedó rota en Filipos. Los partidos de Pompeyo
+        y de César no habían llegado a ser lo bastante fuertes ni coherentes para apoderarse del control del Estado y
+        formar gobierno. Eso quedó para el heredero de César, al frente de una nueva coalición, formada con los restos
+        del naufragio de otros grupos y reemplazándolos a todos ellos. <br>La política y la actuación del pueblo romano
+        estaban guiadas por una oligarquía; sus anales fueron escritos con un espíritu oligárquico. La historia nació
+        del archivo de las inscripciones de consulados y triunfos de los <em>nobiles</em>, de las tradiciones relativas
+        a los
+        orígenes, alianzas y disputas de sus familias; y la historia nunca renegó de sus comienzos. Por necesidad, la
+        concepción era estrecha: sólo la clase gobernante podía tener historia de algún género, y sólo la ciudad
+        gobernante: sólo Roma, no Italia. Durante la revolución, el poder de la vieja clase gobernante resultó
+        quebrantado y su composición transformada. Italia y las clases no políticas de la sociedad triunfaron sobre Roma
+        y sobre la aristocracia romana. Y, sin embargo, el viejo encuadre y sus categorías subsisten y una monarquía
+        impera a través de una oligarquía. <br>Señalados el tema y el tratamiento, queda la elección de la fecha por la
+        que
+        empezar. La ruptura entre Pompeyo y César y el estallido de la guerra en el 49 a. C, pudieran parecer el
+        principio del acto final en la caída de la República romana. Pero ésa no era la opinión de su enemigo Catón; él
+        echaba la culpa a la primera alianza de Pompeyo y César. Cuando Polión emprendió el relato de la historia de la
+        revolución romana no la empezó con el paso del Rubicón, sino con el pacto del 60 a. C. urdido por los políticos
+        Pompeyo, Craso y César, para controlar el Estado y asegurar la dominación del más poderoso de entre ellos:<br>
+        <p style="text-align: center;"><em>Motum ex Metello consule civicum<br>
+            bellique causas et vitia et modos<br>
+            ludumque Fortunae gravisque<br>
+            principum amicitias et arma<br> nondum expiatis uncta cruoribus</em>.*</p>
+        Esa formulación merecía y obtuvo amplia aceptación. La amenaza del poder despótico se cernió sobre Roma, como
+        una pesada nube, durante treinta años, desde la Dictadura de Sila a la Dictadura de César. Fue la era de Pompeyo
+        el Grande. Golpeada por las ambiciones, alianzas y disputas de los dinastas, líderes monárquicos de facciones,
+        como se les llamaba, la República Libre pereció en lucha abierta. Augusto es el heredero de César o de
+        Pompeyo, como se quiera. César, el Dictador, carga con la mayor culpa; pero a decir verdad Pompeyo no era
+        mejor, «occultior non melior». Y Pompeyo está en la línea directa de Mario, Cinna y Sila. Parece todo
+        inevitable, como si el destino hubiese dispuesto la sucesión de los tiranos militares.<br>
+        En estas últimas y fatales convulsiones, un desastre vino tras otro desastre, cada vez más deprisa. Tres de los
+        <em>principes</em> monárquicos cayeron por la espada. Cinco guerras civiles, y más, en veinte años desangraron a
+        Roma
+        y envolvieron al mundo entero en discordia y anarquía. La Galia y el oeste se mantuvieron en su sitio; pero
+        los jinetes de los partos fueron vistos en Siria y en la costa occidental de Asia. El Imperio del pueblo romano,
+        pereciendo a causa de su propia grandeza, amenazaba romperse y disolverse en reinos separados, a menos que un
+        renegado, venido del Oriente como monarca, subyugase a Roma a un poder extranjero. Italia sufrió la devastación
+        y el saqueo de sus ciudades, con la proscripción y el asesinato de sus mejores hombres, pues las ambiciones de
+        los dinastas desataron la guerra entre clase y clase. Era el reinado de la fuerza bruta.<br>
+        La cólera del cielo contra el pueblo romano se manifestaba en portentos y en continuas calamidades; los dioses
+        no velaban por la virtud ni por la justicia, sino que sólo intervenían para castigar. Contra las fuerzas
+        ciegas e impersonales que llevaban al mundo a su perdición, la previsión humana o la acción humana se revelaban
+        impotentes. Los hombres sólo creían en el destino y en las inexorables estrellas.<br>
+        En el principio los reyes gobernaron Roma, y al final, como estaba prescrito por el hado, se volvió de nuevo a
+        la monarquía. La monarquía trajo la concordia. Durante las guerras civiles cada partido y cada líder
+        declaraban estar defendiendo la causa de la libertad y de la paz. Aquellos ideales eran incompatibles. Cuando la
+        paz llegó, fue la paz del despotismo: «cum domino ista pax venit»."
+      </blockquote>
+      <p>*Horacio, <em>Odas</em> 2, 1, 1 ss.: <em>La agitación ciudadana desde el consulado de Metelo; las causas, los
+          crímenes, las formas de la guerra; el juego de la Fortuna, el peso de las amistades de los principales
+          ciudadanos, y las armas, manchadas de una sangre aún no expiada.</em></p>
+      <a href="#">&#8593;</a>
+    </section>
+
+    <hr>
+    <section>
+      <h3><a id="solaris">Acerca de "Solaris" (1974) de Andréi Tarkovsky </a> </h3>
+      <figure> <a href="./assets/images/Solaris_escena.webp"><img src="./assets/images/Solaris_escena.webp" width="500"
+            height="211"
+            alt="Escena del film Solaris de Andréi Tarkovsky con los actores Donatas Banionis y Natalia Sergueyevna Bondarchuk.">
+        </a>
+        <figcaption>Escena de la película Solaris de Andréi Tarkovsky con los actores Donatas Banionis y Natalia
+          Sergueyevna Bondarchuk.</figcaption>
+      </figure>
+      <p>"Solaris" (1972), dirigida por Andréi Tarkovsky, es una película de ciencia ficción basada en la novela
+        homónima de Stanisław Lem. Aclamada por su profundidad filosófica y su estilo visual distintivo, la película se
+        aleja de las convenciones del género para explorar temas existenciales y metafísicos.</p>
+      <h4>Estilo Visual y Narrativa</h4>
+      <p> Tarkovsky es conocido por su estilo visual poético y "Solaris" no es una excepción. La película se caracteriza
+        por largas tomas, planos secuencia meticulosamente compuestos y una cinematografía que privilegia la
+        contemplación sobre la acción. Este enfoque permite una inmersión profunda en los estados emocionales y
+        psicológicos de los personajes, estableciendo un contraste marcado con la ciencia ficción más orientada a la
+        acción y los efectos especiales. </p>
+      <h4>Temática y Filosofía</h4>
+      <p>El tema central de "Solaris" es la confrontación de la humanidad con lo desconocido y lo incomprensible. A
+        diferencia de muchas narrativas de ciencia ficción que se centran en el dominio y la explotación del espacio,
+        Tarkovsky utiliza el planeta Solaris como un espejo para reflejar las complejidades internas de los personajes.
+        La estación espacial se convierte en un lugar donde los protagonistas enfrentan sus miedos, culpas y recuerdos
+        reprimidos. </p>
+      <p>La película plantea preguntas profundas sobre la naturaleza de la realidad, la memoria y la identidad. Los
+        visitantes que aparecen en la estación espacial, manifestaciones físicas de los recuerdos más dolorosos de los
+        personajes, obligan a estos a confrontar aspectos de sí mismos que preferirían olvidar. Este enfoque
+        introspectivo desafía al espectador a reflexionar sobre su propia existencia y la naturaleza de sus relaciones
+        humanas.</p>
+      <h4>Comparación con la Novela</h4>
+      <p>Aunque basada en la obra de Lem, Tarkovsky se toma libertades significativas con la trama y el tono del libro.
+        Mientras que Lem se enfoca más en los aspectos científicos y la exploración del contacto extraterrestre,
+        Tarkovsky convierte la historia en una meditación sobre el alma humana. Esta divergencia no fue del agrado de
+        Lem, quien criticó la adaptación por su enfoque "psicológico y místico". Sin embargo, muchos críticos consideran
+        que la interpretación de Tarkovsky añade una capa de profundidad emocional que enriquece la narrativa original.
+      </p>
+      <h4>Interpretaciones y Legado</h4>
+      <p>"Solaris" ha sido interpretada de múltiples maneras. Algunos ven en ella una crítica a la frialdad de la
+        ciencia y la tecnología, proponiendo que el verdadero conocimiento reside en la comprensión de uno mismo y de
+        los demás. Otros la consideran una obra sobre el duelo y la redención, en la que los personajes buscan liberarse
+        de sus traumas pasados.</p>
+      <p>El legado de "Solaris" es notable. Ha influenciado a innumerables cineastas y sigue siendo objeto de estudio y
+        debate en círculos académicos y cinematográficos. La película es un ejemplo de cómo el cine puede trascender las
+        barreras del género para ofrecer una experiencia profundamente humana y filosófica.</p>
+      <p>"Solaris" de Andréi Tarkovsky es una obra maestra de la ciencia ficción cinematográfica que desafía las
+        expectativas del género y ofrece una exploración introspectiva y filosófica del ser humano. Su estilo visual
+        poético y su enfoque en los temas existenciales la convierten en una película atemporal, que sigue resonando con
+        las audiencias décadas después de su estreno.</p> <a href="#">&#8593;</a>
+    </section>
+    <hr>
+    <section>
+      <h3><a id="criticon"> La Influencia de "El Criticón" de Baltasar Gracián y Morales en la Filosofía de Schopenhauer
+        </a> </h3>
+      <figure> <a href="./assets/images/Baltasar_Gracian.webp"><img src="./assets/images/Baltasar_Gracian.webp"
+            width="335" height="432" loading="lazy"
+            alt="Retrato de Baltasar Gracián y Morales via Wikimedia Commons. El período que el que vivió fue el de la decadencia de los Austrias españoles bajo Felipe III (1598-1621) y Felipe IV (1621-1665). Esta fue también la época de la Guerra de los Treinta Años y del estado de guerra permanente con Francia.">
+        </a>
+        <figcaption>Retrato de Baltasar Gracián y Morales (8 de enero de 1601 - 6 de diciembre de 1658) via Wikimedia
+          Commons. El período en el que vivió fue el de la decadencia de los Austrias españoles bajo Felipe III
+          (1598-1621) y Felipe IV (1621-1665). Esta fue también la época de la Guerra de los Treinta Años y del estado
+          de guerra permanente con Francia.</figcaption>
+      </figure>
+      <p>La obra "El Criticón" de Baltasar Gracián y Morales ha ejercido una influencia significativa en la filosofía
+        occidental, particularmente en la obra del filósofo alemán Arthur Schopenhauer. Aunque separados por siglos y
+        contextos culturales diferentes, tanto Gracián como Schopenhauer compartieron una profunda preocupación por la
+        naturaleza humana y la búsqueda de la sabiduría. En este breve ensayo, examinaremos cómo los temas y las ideas
+        presentes en "El Criticón" resonaron en la filosofía de Schopenhauer, enriqueciendo y dando forma a su
+        pensamiento.</p>
+      <h4>Pesimismo y Visión Trágica de la Vida</h4>
+      <p>Tanto Gracián como Schopenhauer compartieron una visión pesimista de
+        la vida humana, caracterizada por el sufrimiento, la vanidad y la inevitabilidad de la muerte. En "El
+        Criticón",
+        Gracián presenta una imagen sombría de la condición humana, mientras que Schopenhauer argumenta en su obra
+        principal "El mundo como voluntad y representación" que la vida está dominada por la voluntad ciega e
+        insaciable, que conduce al sufrimiento y la insatisfacción. Esta visión trágica de la vida está presente en
+        ambos pensadores y refleja una profunda comprensión de las complejidades del ser humano.</p>
+      <h4>La Búsqueda de la Sabiduría y la Verdad</h4>
+      <p> Tanto Gracián como Schopenhauer abogaron por la búsqueda de la
+        sabiduría y la verdad como un medio para trascender las limitaciones y las ilusiones de la vida humana. En
+        "El
+        Criticón", los personajes principales emprenden un viaje en busca de la sabiduría y la virtud, enfrentándose
+        a
+        numerosos obstáculos y desafíos en el camino. Schopenhauer, por su parte, argumenta que el conocimiento y la
+        contemplación desinteresada son las únicas vías para liberarse del sufrimiento y alcanzar la redención
+        espiritual. Esta búsqueda de la sabiduría como un camino hacia la redención es un tema central tanto en "El
+        Criticón" como en la filosofía de Schopenhauer.</p>
+      <figure> <a href="./assets/images/Arthur_Schopenhauer_Portrait_by_Ludwig_Sigismund_Ruhl_1815.webp"><img
+            src="./assets/images/Arthur_Schopenhauer_Portrait_by_Ludwig_Sigismund_Ruhl_1815_800px.webp" width="500"
+            height="639" loading="lazy"
+            alt="Retrato de Arthur Schopenhauer (22 de febrero de 1788 - 21 de septiembre de 1860) de Ludwig Sigismund Ruhl via Wikimedia Commons. El período en el que vivió fue el de la revolución francesa, las guerras napoleónicas y la revolución industrial.">
+        </a>
+        <figcaption>Retrato de Arthur Schopenhauer (22 de febrero de 1788 - 21 de septiembre de 1860) de Ludwig
+          Sigismund Ruhl via Wikimedia Commons. El período en el que vivió fue el de la Revolución Francesa, las
+          Guerras
+          Napoleónicas y la Revolución Industrial.</figcaption>
+      </figure>
+      <h4>Crítica de la Vanidad y la Futilidad Humana</h4>
+
+      <p> "El Criticón" contiene una aguda crítica de la vanidad y la
+        futilidad de la condición humana, una crítica que resuena en la filosofía de Schopenhauer. Gracián satiriza
+        las
+        pretensiones y las ilusiones de la sociedad de su tiempo, mientras que Schopenhauer argumenta que la vida
+        está
+        dominada por el deseo insaciable y la búsqueda constante de la satisfacción, que finalmente resulta en vacío
+        y
+        desesperación. Ambos pensadores advierten sobre los peligros de la vanidad y la búsqueda desenfrenada de
+        placeres mundanos, señalando la necesidad de trascender estas limitaciones para alcanzar la verdadera
+        felicidad
+        y realización.</p>
+      <h4>Rechazo de la Conformidad y la Hipocresía</h4>
+      <p> Tanto Gracián como Schopenhauer rechazaron la conformidad y la
+        hipocresía como obstáculos para la realización espiritual y la autenticidad humana. En "El Criticón",
+        Gracián
+        critica satíricamente las normas sociales y morales de su tiempo, mientras que Schopenhauer denuncia la
+        falsedad
+        y la superficialidad de la sociedad burguesa del siglo XIX. Ambos pensadores abogan por la individualidad y
+        la
+        honestidad como valores fundamentales para alcanzar la auténtica realización personal y espiritual.</p>
+      <p>La influencia de "El Criticón" de Baltasar Gracián y Morales en la filosofía de Schopenhauer es innegable,
+        evidenciando la capacidad perdurable de esta obra para resonar en diferentes contextos culturales y
+        filosóficos.
+        Tanto Gracián como Schopenhauer compartieron una profunda preocupación por la naturaleza humana y la
+        búsqueda de
+        la sabiduría, temas que se entrelazan en sus respectivas obras para ofrecer una visión penetrante y
+        conmovedora
+        de la condición humana. En última instancia, la influencia de "El Criticón" en Schopenhauer destaca la
+        universalidad y la atemporalidad de los temas y las ideas presentes en esta obra clásica de la literatura
+        española.</p>
+      <p>A continuación una cita de Schopenhauer que aparece en su correspondencia con el hispanista y editor de
+        Calderón y Cervantes en alemán, Johann Georg Keil:</p>
+      <blockquote>"Mi escritor favorito es el filosófico Gracián. He leído todas sus obras. Su Criticón es para mi
+        uno
+        de los mejores libros del mundo. De buena gana lo traduciría si hallara un editor que lo imprimiese."
+      </blockquote>
+      <p>A continuación un extrato de la primera parte de El Criticón:</p>
+      <blockquote> "¿Pues de dónde le viene tal desorden?, preguntó Andrenio. ¿Quién le trastornó de alto abajo,
+        como
+        hoy lo vemos?<br><br> En eso hay mucho que decir, respondió Quirón. Harto lo censuran los sabios y lo lloran
+        los
+        filósofos. Aseguran unos que la Fortuna, como está ciega y aun loca, lo resuelve todo cada día, no dejando
+        cosa
+        en su lugar ni tiempo. Otros dicen que, cuando cayó el lucero de la mañana, aquel aciago día, dió tal golpe
+        en
+        el mundo, que le sacó de sus quicios, trastornándole de alto abajo. Ni falta quien eche la culpa á la mujer,
+        llamándola el duende universal, que todo lo revuelve. Mundo trabucado. Mas yo digo que donde hay hombres no
+        hay
+        que buscar otro achaque: uno solo basta á desconcertar mil mundos y el no poderlo era lo que lloraba el otro
+        grande inquietador.<br><br> Más digo: que, si no previniera la divina Sabiduría que no pudieran llegar los
+        hombres al primer móvil, ya estuviera todo barajado y anduviera el mismo cielo al revés: un día saliera el
+        sol
+        por el poniente y caminara al oriente y entonces fuera España cabeza del mundo, sin contradicción alguna,
+        que no
+        hubiera quien viviera con ella.<br><br> Y es cosa de notar que, siendo el hombre persona de razón, lo
+        primero
+        que ejecuta es hacerla á ella esclava del apetito bestial. De este principio se originan todas las demás
+        monstruosidades. Todo va al revés, en consecuencia de aquel desorden capital. La virtud es perseguida, el
+        vicio
+        aplaudido, la verdad muda, la mentira trilingüe, los sabios no tienen libros y los ignorantes librerías
+        enteras.
+        Los libros están sin doctor y el doctor sin libros. La discreción del pobre es necedad y la necedad del
+        poderoso
+        es celebrada. Los que habían de dar vida matan. Los mozos se marchitan y los viejos reverdecen. El derecho
+        es
+        tuerto y ha llegado el hombre á tal punto de desatino, que no sabe cuál es su mano derecha, pues pone el
+        bien á
+        la izquierda. Lo que más le importa echa á las espaldas, lleva la virtud en tres pies y, en lugar de ir
+        adelante, vuelve atrás." </blockquote> <a href="#">&#8593;</a>
+    </section>
+    <hr>
+    <section>
+      <h3><a id="aurigadedelfos">La Auriga de Delfos y el estilo severo </a> </h3>
+      <figure> <a href="./assets/images/Auriga_de_Delfos.webp"><img src="./assets/images/Auriga_de_Delfos.webp"
+            width="500" height="772" loading="lazy" alt="La Auriga de Delfos. Foto del autor."> </a>
+        <figcaption>La Auriga de Delfos. Foto del autor.</figcaption>
+      </figure>
+      <p>La transición de la escultura griega arcaica a la clásica marca un periodo de evolución significativa en la
+        historia del arte griego, caracterizado por cambios estilísticos, técnicos y conceptuales que reflejan una
+        profunda transformación en la visión estética y cultural de la sociedad griega.</p>
+      <p>La escultura griega arcaica, que floreció aproximadamente entre los siglos VII y VI a.C., se caracteriza por
+        una representación idealizada y estilizada del cuerpo humano, con figuras rígidas y simétricas que reflejan una
+        influencia oriental en su concepción artística. Los kouroi y las korai, esculturas de jóvenes masculinos y
+        femeninos respectivamente, son ejemplos emblemáticos de esta época, con sus posturas frontales y sonrisas
+        arcaicas que sugieren un sentido de solemnidad y serenidad.</p>
+      <p>Sin embargo, hacia el siglo V a.C., con el surgimiento de la democracia en Atenas y el florecimiento de la
+        cultura durante el período clásico, la escultura griega experimentó una transformación radical. Los escultores
+        buscaron capturar una representación más naturalista y realista del cuerpo humano, inspirándose en la
+        observación directa de la anatomía y el movimiento. Este cambio se refleja en obras maestras como el Partenón y
+        las esculturas que lo adornan, donde se puede apreciar una atención meticulosa a los detalles anatómicos y una
+        búsqueda de expresión emocional más sutil y refinada.</p>
+      <p>La Auriga de Delfos es representativa de el período de transición estilílistica de la escultura griega arcaica
+        a la clásica, específicamente el período arcaico final denominado de "estilo severo". El "estilo severo" ocurre
+        aproximadamente durante la primera mitad del siglo V a.C. Este estilo es caracterizado por una serie de rasgos
+        distintivos que reflejan un cambio en la sensibilidad estética y la representación del cuerpo humano. En La
+        Auriga de Delfos se pueden distinguir las siguientes características específicas del estilo severo:</p>
+      <ul>
+        <li> Rigidez y simetría: Aunque se aleja del idealismo rígido del período arcaico, el estilo severo aún conserva
+          ciertos elementos de simetría y rigidez en la representación de las figuras. Sin embargo, esta rigidez se
+          suaviza gradualmente a medida que avanza el período.</li>
+        <li>Expresión facial "severa": La denominación "estilo severo" proviene en parte de la expresión facial de las
+          figuras, que tienden a mostrar una seriedad y gravedad particular. Los rostros suelen tener una mirada fija y
+          concentrada, transmitiendo una sensación de introspección y determinación.</li>
+        <li>Anatomía simplificada: Aunque los escultores del estilo severo muestran un interés creciente en representar
+          una anatomía más realista, aún se pueden observar ciertas simplificaciones y convenciones estilísticas en la
+          representación de los músculos y las formas corporales.</li>
+        <li>Influencias egipcias: Durante este período, Grecia estaba en contacto con el antiguo Egipto, y se observa
+          cierta influencia de la escultura egipcia en el estilo severo, especialmente en la representación de la figura
+          humana con una postura más frontal y una actitud más hierática.</li>
+      </ul>
+      <p>La Auriga de Delfos, también conocida como el Jinete de Delfos, es una de las principales atracciones del Museo
+        Arqueológico de Delfos, donde fue descubierta en 1896 durante excavaciones en el Santuario de Delfos, en Grecia.
+        Data del siglo V a.C., específicamente del año 478 a.C., y se cree que fue erigida para conmemorar la victoria
+        de un auriga en los Juegos Píticos, una de las competiciones atléticas más importantes de la antigua Grecia que
+        se celebraban en honor al dios Apolo. La escultura representa a un auriga, o conductor de carros de carreras,
+        que se encuentra en una postura dinámica y enérgica, como si estuviera en plena carrera. </p>
+      <p>Lo que hace que la Auriga de Delfos sea tan excepcional es su extraordinario realismo y naturalismo, así como
+        la maestría técnica con la que fue esculpida. La escultura está tallada en bronce y muestra un nivel de detalle
+        impresionante, desde los pliegues de la túnica hasta los músculos del cuerpo del auriga. Se cree que la
+        escultura original estaba adornada con incrustaciones de marfil y piedras preciosas, lo que habría añadido un
+        nivel de exquisitez aún mayor a la obra.</p>
+      <p>Uno de los aspectos más fascinantes de la Auriga de Delfos es su expresión facial, que irradia una combinación
+        de determinación, concentración y serenidad. El auriga parece estar totalmente concentrado en dirigir su carro
+        hacia la victoria, lo que sugiere una conexión profunda entre el atleta y su montura. Esta expresión de
+        intensidad emocional y control es característica de la escultura griega clásica, que buscaba capturar no solo la
+        belleza física, sino también la complejidad psicológica y emocional del ser humano.</p>
+      <p>Además de su valor estético y artístico, la Auriga de Delfos también tiene un importante valor histórico y
+        cultural. Como testimonio de la importancia de los Juegos Píticos y la dedicación de los griegos a sus deidades,
+        la escultura representa un vínculo tangible con el pasado glorioso de la antigua Grecia. Su descubrimiento y
+        posterior restauración han permitido a generaciones posteriores apreciar y estudiar esta obra maestra de la
+        escultura griega, que continúa asombrando y cautivando a espectadores de todo el mundo.</p>
+      <p>En resumen, la Auriga de Delfos es una obra de arte extraordinaria que encapsula la incipiente escultura griega
+        clásica. Con su realismo, naturalismo y expresividad emocional, la escultura representa el pináculo del arte
+        griego antiguo y sigue siendo objeto de admiración y estudio en la actualidad. Como testigo silencioso de una
+        época de esplendor y grandeza, la Auriga de Delfos perdura como un recordatorio eterno del ingenio y la
+        creatividad del pueblo griego.</p> <a href="#">&#8593;</a>
+    </section>
+    <hr>
+
+  </div>
+  <div class="box sidebar">
+    <h2>Curiosidades</h2>
+    <section><a id="machhapuchhre"></a>
+      <figure> <a href="./assets/images/Machhapuchhre.webp"><img src="./assets/images/Machhapuchhre.webp" width="400"
+            height="267"
+            alt="Montaña cola de pez o Machhapuchhre vista desde un lado del lago Phewa en Pokhara. Foto del autor. Machhapuchhre es considerada el hogar del dios Shiva y tiene 6993 metros de altura."></a>
+        <figcaption>Montaña cola de pez o Machhapuchhre vista desde un lado del lago Phewa en Pokhara, Nepal.
+          Machhapuchhre es considerada el hogar del dios Shiva y tiene 6993 metros de altura. Foto del autor.
+        </figcaption>
+      </figure>
+    </section>
+    <section><a id="friso"></a>
+      <figure> <a href="./assets/images/Detalle_del_friso_del_tesoro_de_los_sifniose_en_Delfos.webp"><img
+            src="./assets/images/Detalle_del_friso_del_tesoro_de_los_sifniose_en_Delfos.webp" loading="lazy" width="400"
+            height="300"
+            alt="Detalle del friso del tesoro de los sinifios en Delfos representando la mítica guerra entre los dioses y los gigantes o gigantomaquia. A la izquierda Artemisa y Apolo combatiendo. Efialtes llace muerto en el suelo. Efialtes murió de un flechazo en cada ojo, uno de Apolo y otro de Heracles. Foto del autor."></a>
+        <figcaption>Detalle del friso del tesoro de los sinifios en Delfos representando la mítica guerra entre los
+          dioses y los gigantes o gigantomaquia. A la izquierda Artemisa y Apolo combatiendo. El gigante Efialtes llace
+          muerto en el suelo. Efialtes murió de un flechazo en cada ojo, uno de Apolo y otro de Heracles. Foto del
+          autor. </figcaption>
+      </figure>
+    </section>
+  </div>
+  <div class="box footer">Esta página pesa aproximadamente 17KB. Fue diseñada en HTML y CSS por el autor. Solo usa JS
+    para Google Analytics.<br> Las imágenes son en formato webp y/o svg. Está optimizada según los estándares básicos de
+    funcionamiento y accesibilidad de <a
+      href="https://pagespeed.web.dev/analysis/https-ealeman-com/3i3rxzcwh9?form_factor=mobile">PageSpeed Insights</a>.
+    Fue generada usando <a href="https://pages.github.com">GitHub Pages</a>.<br> &copy; Eduardo Alemán, 2024.</div>
+</body>
+
+</html>
